@@ -126,56 +126,6 @@ def derivatives(y):
     d3y = spline.derivative(3)(x)
     
     return d1y, d2y, d3y
-
-def first_derivative(y):
-    """First derivative on a periodic domain using cubic spline with wrapped endpoint"""
-    
-    N = y.shape[0]
-    dx = 2 * np.pi / N
-    x = (np.arange(N) + 0.5) * dx
-
-    # periodic extension
-    x_ext = np.concatenate([x, [x[0] + 2*np.pi]])
-    y_ext = np.concatenate([y, [y[0]]])
-
-    spline = CubicSpline(x_ext, y_ext, bc_type='periodic')
-
-    dy = spline.derivative(1)(x)
-    return dy
-
-
-def second_derivative(y):
-    """Second derivative on a periodic domain using cubic spline with wrapped endpoint"""
-    
-    N = y.shape[0]
-    dx = 2 * np.pi / N
-    x = (np.arange(N) + 0.5) * dx
-
-    # periodic extension
-    x_ext = np.concatenate([x, [x[0] + 2*np.pi]])
-    y_ext = np.concatenate([y, [y[0]]])
-
-    spline = CubicSpline(x_ext, y_ext, bc_type='periodic')
-
-    dy = spline.derivative(2)(x)
-    return dy
-
-
-def third_derivative(y):
-    """Third derivative on a periodic domain using cubic spline with wrapped endpoint"""
-    
-    N = y.shape[0]
-    dx = 2 * np.pi / N
-    x = (np.arange(N) + 0.5) * dx
-
-    # periodic extension
-    x_ext = np.concatenate([x, [x[0] + 2*np.pi]])
-    y_ext = np.concatenate([y, [y[0]]])
-
-    spline = CubicSpline(x_ext, y_ext, bc_type='periodic')
-
-    dy = spline.derivative(3)(x)
-    return dy
     
 def metropolis(dL, D, temperature):
     """ accept move according to Metropolis criterion + enforce positive D(x) """
