@@ -16,6 +16,6 @@ Anže Hubman & Franci Merzel (Theory department, National Institute of Chemistry
 - `yaml`
 - `tqdm`
 
-<p style="font-size:10px;">
+<p style="font-size:8px;">
 The image above was generated using ChatGPT.
 </p>
