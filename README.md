@@ -1,4 +1,3 @@
-# Position-Diffusion
 <p align="center">
   <img src="image_readme/readme.png" width="500">
 </p>
