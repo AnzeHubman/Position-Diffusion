@@ -13,5 +13,6 @@ Anže Hubman & Franci Merzel (Theory department, National Institute of Chemistry
 - `scipy`
 - `matplotlib`
 - `numba`
+- `yaml`
 
 The image above was generated using ChatGPT.
